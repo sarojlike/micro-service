@@ -1,0 +1,15 @@
+
+server:  port: 8082
+  
+spring:  application:    name: hello-service
+  
+hello:
+  message: Hello from production enviornment
+  
+hi:
+  message2: Hi from production enviornment
+   
+eureka:  client:
+    serviceUrl:
+     defaultZone: http://localhost:8083/eureka/
+     

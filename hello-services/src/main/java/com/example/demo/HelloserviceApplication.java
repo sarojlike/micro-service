@@ -21,7 +21,7 @@ public class HelloserviceApplication {
 	private String message2;
 	 
 	
-	@RequestMapping("/hello")
+	@RequestMapping("/hellomessage")
 	public Map<String, String> hello() {
 		HashMap<String, String> response = new HashMap<String,String>(){{
 			this.put("status", "OK");

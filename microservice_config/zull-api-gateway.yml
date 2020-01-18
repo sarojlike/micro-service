@@ -1,0 +1,44 @@
+
+spring:
+  application:
+    name: zull-api-gateway
+
+server:
+  port: 8084
+  
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8083/eureka/
+    
+    region: default
+    registry-fetch-interval-seconds: 5
+    
+zuul:
+  routes:
+    hello-service:
+     path: /hello/**
+     sensitive-headers:
+      - Set-Cookie,Authorization
+    syncmessanger:
+     path: /syncmessage/**
+     sensitive-headers:
+      - Set-Cookie,Authorization
+      
+hystrix:
+  command:
+   hello-service:
+    execution:
+     isolation:
+      thread:
+       timeoutInMilliseconds: 600000 
+   syncmessanger:
+    execution:
+     isolation:
+      thread:
+       timeoutInMilliseconds: 600000 
+
+    
+  
+   
+   
