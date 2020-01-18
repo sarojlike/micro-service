@@ -1,0 +1,4 @@
+
+spring:
+  cloud:    config:      name: zull-api-gateway
+      uri:      - http://localhost:8081
