@@ -2,4 +2,4 @@
 server:  port: 8081
   
 spring:  application:    name: config-server
-       cloud:    config:      server:        git:          uri: file://D:/microservice_config
+       cloud:    config:      server:        git:          uri: file://D:/micro_services_workspace/microservice_config
