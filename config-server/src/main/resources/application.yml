@@ -2,4 +2,8 @@
 server:  port: 8081
   
 spring:  application:    name: config-server
-       cloud:    config:      server:        git:          uri: file://D:/micro_services_workspace/microservice_config
+       cloud:    config:       server:
+        native:          search-locations: classpath:/shared
+  profiles:
+    active: native        ##git:
+          ##uri: https://github.com/sarojlike/micro-service/microservice_config          ##uri: file://D:/micro_services_workspace/microservice_config
