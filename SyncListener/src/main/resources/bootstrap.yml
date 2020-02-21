@@ -1,0 +1,5 @@
+
+
+spring:
+  cloud:    config:      name: synclistener
+      uri:      - http://localhost:8081
